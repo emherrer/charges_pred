@@ -11,6 +11,8 @@ def predict(model, input_df):
     predictions = predictions_df["prediction_label"][0]
     return predictions
 
+# Frontend App
+
 st.title("Insurance Charges Predition App")
 
 # Side bar
@@ -35,7 +37,7 @@ if add_selectbox == "Online":
     region = st.selectbox("Region", ["southwest", "northwest", "northeast", "southeast"])
     
     input_dict = {"age": age, "sex": sex, "bmi": bmi, "children": children, 
-                  "smoker": smoker, "region": region}
+                "smoker": smoker, "region": region}
     input_df = pd.DataFrame([input_dict])
     
     output = ""
